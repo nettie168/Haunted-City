@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs")  %>
+
+<title>Photos</title>
+</head>
+<body>
+
+    <div class="text-center">
+        <div class="container-fluid">
+            <h1>Photos</h1>
+            <h2>Our photos of Haunted City Roller Derby in action</h2>
+        </div>
+    </div>
+
+<div class="container-fluid text-center">
+
+  <% for (event of events) { %>
+    <div class="eventCard">
+      <a href="/photos/<%= event %>">
+        <div class="eventCardImg">
+            <img class="photoCard" src="<%= "/photos/"+event+"/firstImage.jpg" %>" onError="this.onerror=null;this.src='/HauntedCityRollerDerbyCutOut.png';">
+        </div>
+
+        <div class="eventTitle">
+          <h3><%= event %></h3>
+        </div>
+      </a>
+    </div>
+  <% } %>
+
+</div>
+
+
+<%- include("partials/footer.ejs")  %>

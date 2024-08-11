@@ -1,0 +1,483 @@
+<%- include ("partials/header.ejs") %>
+
+<title>Haunted City Home</title>
+
+<body>
+  <div class="container-fluid text-center full-screen">
+    <div class="container-fluid">
+      <h1 id="title">Haunted City</h1>
+
+      <h2 id="subtitle">Roller derby</h2>
+    </div>
+
+    <div class="title-card">
+      <img class="img-fluid rotating" src="HauntedCityRollerDerbyCutOut.png" />
+      <h3>York's local roller derby league</h3>
+    </div>
+  </div>
+
+  <div class="container-fluid purple text-center" id="derbySummary">
+    <h3>Situated in the green land of <em>Yorkshire, England</em></h3>
+    <h3>we are a skater-run competitive flat-track <em>roller derby league</em></h3>
+    <h3>with trans and non-binary inclusive teams</h3>
+  </div>
+
+  <!-- Cine 20.1-->
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="3"
+        aria-label="Slide 4"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="derby1Cin.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="derby2Cin.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="derby3Cin.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="derby4Cin.jpg" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="list-container">
+    <div class="row">
+      <h2>Our Teams</h2>
+      <div class="col-md-4">
+        <div class="content">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="wraithsLogotransp.png" />
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">WRAITHS</h3>
+            <p class="content-text">
+              Our WFTDA aligned competing team, trans and non-binary inclusive
+              (previously called Minxters).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="content">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="phantomsLogotransp.png" />
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">PHANTOMS</h3>
+            <p class="content-text">
+              Our Open to All (OTA) challenge team, an inclusive training
+              programme for all genders (previously called Monsters).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="content">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="terrorsLogotransp.png" />
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">TERRORS</h3>
+            <p class="content-text">
+              Open to all young people aged 8 -17 years, no previous skating
+              experience necessary*.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p id="junior-star">
+        *<em
+          >Junior skaters work through a programme of skills designed to help
+          them progress safely and at their own pace, playing games at Levels 1,
+          2 and 3.</em
+        >
+      </p>
+    </div>
+  </div>
+
+  <svg
+    width="100%"
+    height="100%"
+    id="svg"
+    viewBox="0 0 1440 490"
+    xmlns="http://www.w3.org/2000/svg"
+    class="transition duration-300 ease-in-out delay-150"
+  >
+    <style>
+      .path-0 {
+        animation: pathAnim-0 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-0 {
+        0% {
+          d: path(
+            "M 0,500 L 0,93 C 101.89285714285714,103.53571428571428 203.78571428571428,114.07142857142857 316,118 C 428.2142857142857,121.92857142857143 550.75,119.25 667,122 C 783.25,124.75 893.2142857142858,132.92857142857144 1021,129 C 1148.7857142857142,125.07142857142857 1294.392857142857,109.03571428571428 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 L 0,93 C 110.32142857142858,83.57142857142857 220.64285714285717,74.14285714285714 345,89 C 469.35714285714283,103.85714285714286 607.7499999999999,143 720,134 C 832.2500000000001,125.00000000000001 918.3571428571429,67.85714285714286 1034,53 C 1149.642857142857,38.14285714285714 1294.8214285714284,65.57142857142857 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 L 0,93 C 139.39285714285714,67.67857142857143 278.7857142857143,42.35714285714286 386,58 C 493.2142857142857,73.64285714285714 568.25,130.25 698,135 C 827.75,139.75 1012.2142857142856,92.64285714285714 1145,77 C 1277.7857142857144,61.357142857142854 1358.8928571428573,77.17857142857143 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 L 0,93 C 156.78571428571428,92.67857142857143 313.57142857142856,92.35714285714286 423,101 C 532.4285714285714,109.64285714285714 594.5,127.25000000000001 712,115 C 829.5,102.74999999999999 1002.4285714285713,60.64285714285714 1133,52 C 1263.5714285714287,43.35714285714286 1351.7857142857142,68.17857142857143 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 L 0,93 C 101.89285714285714,103.53571428571428 203.78571428571428,114.07142857142857 316,118 C 428.2142857142857,121.92857142857143 550.75,119.25 667,122 C 783.25,124.75 893.2142857142858,132.92857142857144 1021,129 C 1148.7857142857142,125.07142857142857 1294.392857142857,109.03571428571428 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+      }
+    </style>
+    <path
+      d="M 0,500 L 0,93 C 101.89285714285714,103.53571428571428 203.78571428571428,114.07142857142857 316,118 C 428.2142857142857,121.92857142857143 550.75,119.25 667,122 C 783.25,124.75 893.2142857142858,132.92857142857144 1021,129 C 1148.7857142857142,125.07142857142857 1294.392857142857,109.03571428571428 1440,93 L 1440,500 L 0,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="#692b7b"
+      fill-opacity="0.4"
+      class="transition-all duration-300 ease-in-out delay-150 path-0"
+    ></path>
+    <style>
+      .path-1 {
+        animation: pathAnim-1 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-1 {
+        0% {
+          d: path(
+            "M 0,500 L 0,218 C 129.35714285714286,228.28571428571428 258.7142857142857,238.57142857142858 364,242 C 469.2857142857143,245.42857142857142 550.4999999999999,242.00000000000003 669,244 C 787.5000000000001,245.99999999999997 943.2857142857142,253.42857142857142 1078,250 C 1212.7142857142858,246.57142857142858 1326.357142857143,232.28571428571428 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 L 0,218 C 106.42857142857142,223.92857142857144 212.85714285714283,229.85714285714286 347,230 C 481.14285714285717,230.14285714285714 643.0000000000001,224.5 779,221 C 914.9999999999999,217.5 1025.142857142857,216.14285714285717 1131,216 C 1236.857142857143,215.85714285714283 1338.4285714285716,216.92857142857142 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 L 0,218 C 118.17857142857142,243.17857142857144 236.35714285714283,268.3571428571429 355,253 C 473.64285714285717,237.64285714285714 592.7499999999999,181.75 699,174 C 805.2500000000001,166.25 898.6428571428573,206.64285714285717 1020,222 C 1141.3571428571427,237.35714285714283 1290.6785714285713,227.67857142857142 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 L 0,218 C 99.78571428571428,200.92857142857144 199.57142857142856,183.85714285714286 314,188 C 428.42857142857144,192.14285714285714 557.4999999999999,217.5 675,235 C 792.5000000000001,252.5 898.4285714285716,262.1428571428571 1024,258 C 1149.5714285714284,253.85714285714286 1294.7857142857142,235.92857142857144 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 L 0,218 C 129.35714285714286,228.28571428571428 258.7142857142857,238.57142857142858 364,242 C 469.2857142857143,245.42857142857142 550.4999999999999,242.00000000000003 669,244 C 787.5000000000001,245.99999999999997 943.2857142857142,253.42857142857142 1078,250 C 1212.7142857142858,246.57142857142858 1326.357142857143,232.28571428571428 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+      }
+    </style>
+    <path
+      d="M 0,500 L 0,218 C 129.35714285714286,228.28571428571428 258.7142857142857,238.57142857142858 364,242 C 469.2857142857143,245.42857142857142 550.4999999999999,242.00000000000003 669,244 C 787.5000000000001,245.99999999999997 943.2857142857142,253.42857142857142 1078,250 C 1212.7142857142858,246.57142857142858 1326.357142857143,232.28571428571428 1440,218 L 1440,500 L 0,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="#692b7b"
+      fill-opacity="0.53"
+      class="transition-all duration-300 ease-in-out delay-150 path-1"
+    ></path>
+    <style>
+      .path-2 {
+        animation: pathAnim-2 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-2 {
+        0% {
+          d: path(
+            "M 0,500 L 0,343 C 79.75,332.0357142857143 159.5,321.07142857142856 294,318 C 428.5,314.92857142857144 617.7499999999999,319.75 760,328 C 902.2500000000001,336.25 997.5,347.92857142857144 1103,351 C 1208.5,354.07142857142856 1324.25,348.5357142857143 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 L 0,343 C 123.53571428571428,334.17857142857144 247.07142857142856,325.35714285714283 367,327 C 486.92857142857144,328.64285714285717 603.2499999999999,340.75 724,354 C 844.7500000000001,367.25 969.9285714285716,381.64285714285717 1090,380 C 1210.0714285714284,378.35714285714283 1325.0357142857142,360.67857142857144 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 L 0,343 C 148.46428571428572,362.17857142857144 296.92857142857144,381.35714285714283 414,385 C 531.0714285714286,388.64285714285717 616.75,376.75 718,366 C 819.25,355.25 936.0714285714287,345.64285714285717 1059,342 C 1181.9285714285713,338.35714285714283 1310.9642857142858,340.67857142857144 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 L 0,343 C 123.39285714285714,329.7857142857143 246.78571428571428,316.57142857142856 374,325 C 501.2142857142857,333.42857142857144 632.2499999999999,363.50000000000006 758,372 C 883.7500000000001,380.49999999999994 1004.2142857142858,367.4285714285714 1117,359 C 1229.7857142857142,350.5714285714286 1334.892857142857,346.78571428571433 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 L 0,343 C 79.75,332.0357142857143 159.5,321.07142857142856 294,318 C 428.5,314.92857142857144 617.7499999999999,319.75 760,328 C 902.2500000000001,336.25 997.5,347.92857142857144 1103,351 C 1208.5,354.07142857142856 1324.25,348.5357142857143 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+      }
+    </style>
+    <path
+      d="M 0,500 L 0,343 C 79.75,332.0357142857143 159.5,321.07142857142856 294,318 C 428.5,314.92857142857144 617.7499999999999,319.75 760,328 C 902.2500000000001,336.25 997.5,347.92857142857144 1103,351 C 1208.5,354.07142857142856 1324.25,348.5357142857143 1440,343 L 1440,500 L 0,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="#692b7b"
+      fill-opacity="1"
+      class="transition-all duration-300 ease-in-out delay-150 path-2"
+    ></path>
+  </svg>
+
+  <div class="container-fluid fullscreen text-center new-intake info purple">
+    <h2>New Intake</h2>
+
+    <p>
+      Want to join the epic game of roller derby and be part of a vibrant team?
+    </p>
+
+    <p>
+      We run an adults New Intake session every June and January, with our
+      current intake having started in June 2023.
+    </p>
+    <p>
+      If you would like to join our brilliant roller derby team our next new
+      intake programme will be in January 2025.
+    </p>
+
+    <p>Places are limited, so get in touch to secure your place.</p>
+
+    <a href="NewSkaters.html" class="grey-button">Join Our Team!</a>
+  </div>
+  <svg
+    width="100%"
+    height="100%"
+    id="svg"
+    viewBox="0 0 1440 490"
+    xmlns="http://www.w3.org/2000/svg"
+    class="transition duration-300 ease-in-out delay-150"
+  >
+    <style>
+      .path-0 {
+        animation: pathAnim-0 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-0 {
+        0% {
+          d: path(
+            "M 0,500 L 0,93 C 103.28571428571428,75.17857142857143 206.57142857142856,57.357142857142854 323,56 C 439.42857142857144,54.642857142857146 569,69.75000000000001 687,74 C 805,78.24999999999999 911.4285714285716,71.64285714285714 1035,73 C 1158.5714285714284,74.35714285714286 1299.2857142857142,83.67857142857143 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 L 0,93 C 95.85714285714286,87.82142857142857 191.71428571428572,82.64285714285714 326,86 C 460.2857142857143,89.35714285714286 633,101.25 771,98 C 909,94.75 1012.2857142857142,76.35714285714286 1118,73 C 1223.7142857142858,69.64285714285714 1331.857142857143,81.32142857142857 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 L 0,93 C 125.89285714285717,70.10714285714286 251.78571428571433,47.214285714285715 386,52 C 520.2142857142857,56.785714285714285 662.7500000000001,89.25000000000001 766,106 C 869.2499999999999,122.74999999999999 933.2142857142856,123.78571428571429 1039,119 C 1144.7857142857144,114.21428571428571 1292.3928571428573,103.60714285714286 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 L 0,93 C 145.32142857142856,114.64285714285714 290.6428571428571,136.28571428571428 415,124 C 539.3571428571429,111.71428571428571 642.75,65.5 745,55 C 847.25,44.49999999999999 948.3571428571429,69.71428571428571 1064,82 C 1179.642857142857,94.28571428571429 1309.8214285714284,93.64285714285714 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 L 0,93 C 103.28571428571428,75.17857142857143 206.57142857142856,57.357142857142854 323,56 C 439.42857142857144,54.642857142857146 569,69.75000000000001 687,74 C 805,78.24999999999999 911.4285714285716,71.64285714285714 1035,73 C 1158.5714285714284,74.35714285714286 1299.2857142857142,83.67857142857143 1440,93 L 1440,500 L 0,500 Z"
+          );
+        }
+      }
+    </style>
+    <path
+      d="M 0,500 L 0,93 C 103.28571428571428,75.17857142857143 206.57142857142856,57.357142857142854 323,56 C 439.42857142857144,54.642857142857146 569,69.75000000000001 687,74 C 805,78.24999999999999 911.4285714285716,71.64285714285714 1035,73 C 1158.5714285714284,74.35714285714286 1299.2857142857142,83.67857142857143 1440,93 L 1440,500 L 0,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="#692b7b"
+      fill-opacity="0.4"
+      class="transition-all duration-300 ease-in-out delay-150 path-0"
+      transform="rotate(-180 720 250)"
+    ></path>
+    <style>
+      .path-1 {
+        animation: pathAnim-1 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-1 {
+        0% {
+          d: path(
+            "M 0,500 L 0,218 C 162.64285714285717,216.03571428571428 325.28571428571433,214.07142857142858 426,209 C 526.7142857142857,203.92857142857142 565.5,195.75 671,196 C 776.5,196.25 948.7142857142858,204.92857142857144 1088,210 C 1227.2857142857142,215.07142857142856 1333.642857142857,216.53571428571428 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 L 0,218 C 149.53571428571428,217.35714285714286 299.07142857142856,216.71428571428572 406,222 C 512.9285714285714,227.28571428571428 577.25,238.50000000000006 687,239 C 796.75,239.49999999999994 951.9285714285713,229.28571428571428 1085,224 C 1218.0714285714287,218.71428571428572 1329.0357142857142,218.35714285714286 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 L 0,218 C 132.75,229.14285714285714 265.5,240.28571428571428 396,245 C 526.5,249.71428571428572 654.75,248 778,237 C 901.25,226 1019.5,205.7142857142857 1129,201 C 1238.5,196.2857142857143 1339.25,207.14285714285717 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 L 0,218 C 101,197.03571428571428 202,176.07142857142858 336,176 C 470,175.92857142857142 637,196.74999999999997 765,197 C 893,197.25000000000003 982,176.92857142857142 1088,177 C 1194,177.07142857142858 1317,197.53571428571428 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 L 0,218 C 162.64285714285717,216.03571428571428 325.28571428571433,214.07142857142858 426,209 C 526.7142857142857,203.92857142857142 565.5,195.75 671,196 C 776.5,196.25 948.7142857142858,204.92857142857144 1088,210 C 1227.2857142857142,215.07142857142856 1333.642857142857,216.53571428571428 1440,218 L 1440,500 L 0,500 Z"
+          );
+        }
+      }
+    </style>
+    <path
+      d="M 0,500 L 0,218 C 162.64285714285717,216.03571428571428 325.28571428571433,214.07142857142858 426,209 C 526.7142857142857,203.92857142857142 565.5,195.75 671,196 C 776.5,196.25 948.7142857142858,204.92857142857144 1088,210 C 1227.2857142857142,215.07142857142856 1333.642857142857,216.53571428571428 1440,218 L 1440,500 L 0,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="#692b7b"
+      fill-opacity="0.53"
+      class="transition-all duration-300 ease-in-out delay-150 path-1"
+      transform="rotate(-180 720 250)"
+    ></path>
+    <style>
+      .path-2 {
+        animation: pathAnim-2 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-2 {
+        0% {
+          d: path(
+            "M 0,500 L 0,343 C 109.78571428571428,335.1071428571429 219.57142857142856,327.2142857142857 327,327 C 434.42857142857144,326.7857142857143 539.4999999999999,334.24999999999994 670,338 C 800.5000000000001,341.75000000000006 956.4285714285713,341.78571428571433 1089,342 C 1221.5714285714287,342.21428571428567 1330.7857142857142,342.60714285714283 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 L 0,343 C 95.75,351.1071428571429 191.5,359.2142857142857 316,369 C 440.5,378.7857142857143 593.75,390.25 730,385 C 866.25,379.75 985.5,357.78571428571433 1101,348 C 1216.5,338.21428571428567 1328.25,340.60714285714283 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 L 0,343 C 101.14285714285714,367.1071428571429 202.28571428571428,391.2142857142857 314,383 C 425.7142857142857,374.7857142857143 548,334.25 663,318 C 778,301.75 885.7142857142858,309.7857142857143 1014,318 C 1142.2857142857142,326.2142857142857 1291.142857142857,334.6071428571429 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 L 0,343 C 139.10714285714283,351.2142857142857 278.21428571428567,359.42857142857144 402,346 C 525.7857142857143,332.57142857142856 634.2499999999999,297.5 744,301 C 853.7500000000001,304.5 964.7857142857142,346.57142857142856 1081,360 C 1197.2142857142858,373.42857142857144 1318.607142857143,358.2142857142857 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 L 0,343 C 109.78571428571428,335.1071428571429 219.57142857142856,327.2142857142857 327,327 C 434.42857142857144,326.7857142857143 539.4999999999999,334.24999999999994 670,338 C 800.5000000000001,341.75000000000006 956.4285714285713,341.78571428571433 1089,342 C 1221.5714285714287,342.21428571428567 1330.7857142857142,342.60714285714283 1440,343 L 1440,500 L 0,500 Z"
+          );
+        }
+      }
+    </style>
+    <path
+      d="M 0,500 L 0,343 C 109.78571428571428,335.1071428571429 219.57142857142856,327.2142857142857 327,327 C 434.42857142857144,326.7857142857143 539.4999999999999,334.24999999999994 670,338 C 800.5000000000001,341.75000000000006 956.4285714285713,341.78571428571433 1089,342 C 1221.5714285714287,342.21428571428567 1330.7857142857142,342.60714285714283 1440,343 L 1440,500 L 0,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="#692b7b"
+      fill-opacity="1"
+      class="transition-all duration-300 ease-in-out delay-150 path-2"
+      transform="rotate(-180 720 250)"
+    ></path>
+  </svg>
+
+  <div class="container full-screen">
+    <h2>FAQs</h2>
+
+    <details>
+      <summary>What is roller derby?</summary>
+      <div>
+        Roller derby is a full contact team sport, sort of like rugby on roller
+        skates. It is played on a flat track (usually in a sports hall), and the
+        object of the game is to score as many points as possible by lapping
+        opposing team skaters on the track.
+      </div>
+    </details>
+
+    <details>
+      <summary>I haven't skated before, can I still join?</summary>
+      <div>
+        Absolutely! Sign up for our <a href="NewSkaters.html">New Intake</a>. We
+        will teach you all the skills you need to skate and play roller derby.
+        You don't even need your own skates, we can provide you with the skates
+        and pads for your first intake.
+      </div>
+    </details>
+
+    <details>
+      <summary>I don't want to skate, can I still get involed?</summary>
+      <div>
+        Yes! We would love that! You can become a Non-Skating Official (NSO).
+        These valued volunteers run our games, and make it possible for us to
+        play. Please get in touch if you think this could be you.
+      </div>
+    </details>
+
+    <details>
+      <summary>My child would like to play, how can they join?</summary>
+      <div>
+        We have a Juniors Team called the Terrors, for 8 to 17 year olds, which
+        your child can join. Just send us a message by email or social media and
+        we can sign them up.
+      </div>
+    </details>
+  </div>
+
+  <%- include ("partials/footer.ejs") %>
+</body>

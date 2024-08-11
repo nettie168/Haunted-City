@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs")  %>
+
+<title>Haunted City Photos</title>
+</head>
+<body>
+
+  <div class="container-fluid text-center"> 
+    <% if(locals.event){ %>
+        <h1><%= event.replaceAll("-"," ").replaceAll("__","?") %></h1>
+    <%}else{ %>
+        <p>Blog Title not found, sorry about that, here's a substitute</p>
+        <h1 class="blog-title">Photos!</h1>
+    <% } %>
+  </div>
+
+  <!--<% if(locals.description){ %>
+    <% console.log(description) %>
+    <div class="container text-center">
+      <%- include(description) %>
+    </div>
+  <% }else{ %>
+    <p>No desc</p>
+  <% } %>-->
+
+
+  <% if(locals.photos&&photos.length>=1){%>
+    <div class="container">
+        <% for (photo of photos) { %>
+          <div class="eventCard">
+            <a href="<%="/photos/"+event +"/" + photo %>">
+              <div class="">
+                <img src="<%= "/photos/"+event+"/"+photo %>">
+              </div>
+            </a>
+          </div>
+        <% } %>
+    </div>
+  <% }else{ %>
+    <div class="container text-center">
+      <h3>Sorry folks, no photos to show right now! </h3>
+      <a href="/photos">Back to Photos</a>
+    </div>
+  <% } %>
+
+<%- include("partials/footer.ejs")  %>
