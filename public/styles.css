@@ -56,12 +56,12 @@ a{
 
 /* unvisited link */
 p> a:link {
-  color: white;
+  color: green;
 }
 
 /* visited link */
 p > a:visited {
-  color: var(--grey-colour);
+  color: var(--purple-colour);
 }
 
 /* mouse over link */
@@ -147,6 +147,10 @@ details[open] div{
   background-color: var(--purple-colour);
 }
 
+.purple p > a:visited {
+  color: var(--grey-colour);
+}
+
 .white-card{
   background-color: whitesmoke;
   color: black;
@@ -160,7 +164,8 @@ details[open] div{
 }
 
 .white-card li{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  margin: 5px;
 }
 
 @media (min-width: 768px) {
@@ -179,6 +184,7 @@ details[open] div{
   border-bottom: 10px solid #4d4b4d;
   padding: 25px;
   margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -345,6 +351,14 @@ border-color: white;
 
 .title-card img{
     width: 60%;
+}
+
+.dropdown-item:hover{
+  background: rgba(0,0,0,0.5);
+}
+
+.dropdown-item:active{
+  background-color: black;
 }
 
 /*#title-card img:hover{
@@ -584,7 +598,7 @@ border-color: white;
 }
 
 .social_icon, .menu, a{
-    color: white;
+    color: black;
     margin: 0 10px;
 }
 
@@ -747,18 +761,19 @@ border-color: white;
 /*Photos*/
 .eventCard {
   /* Add shadows to create the "card" effect */
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 10px; 
+  /*box-shadow: 0 4px 8px 0 var(--purple-colour); */
+  box-shadow: 0 4px 8px 0 black;
   transition: 0.3s;
-  width: 400px; /* 280px*/
-  height: 260px; /*300px*/
+  margin: 10px;
   background-color: black;
   display: inline-block;
 }
 
 /* On mouse-over, add a deeper shadow */
-.eventCard:hover {
-  box-shadow: 2px 8px 16px 2px rgba(255, 207, 250, 0.5);
+.eventCard:hover{
+  /*box-shadow: 2px 8px 16px 2px var(--purple-colour);*/
+  box-shadow: 2px 8px 16px 0px black;
   transition: 0.05s;
 }
 
@@ -776,12 +791,14 @@ border-color: white;
 }
 
 .eventCardImg{
-  overflow: hidden;
-  display: inline-block;
-  border-radius: 20px 20px 20px 20px;
+  /*overflow: hidden; /*does it do anything?*/
+  /*display: inline-block;*/
+  /*border-radius: 20px 20px 20px 20px;*/
 }
 
 .eventCard img{
+  border-radius: 10px 10px 0px 0px; 
+  margin-top: -30px;
   width: 400px; /*280px*/
   height: 260px;
   object-fit: cover;
@@ -789,18 +806,16 @@ border-color: white;
 
 .photoCard{
   /* Add shadows to create the "card" effect */
-  border-radius: 25px;
-  /*align-self: center;*/
-  margin: 0px 0px 0px 0px;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
-  transition: 0.3s;
+  margin: 10px 0px 10px 10px;
   width: 400px; /* 280px*/
   height: 260px; /*300px*/
-  background-color: black;
   display: inline-block;
 }
 
 .photoCard img{
+  border-radius: 10px;
+  width: 400px; /*280px*/
+  height: 260px;
   object-fit: cover;
 }
 
@@ -853,22 +868,32 @@ div.desc {
 }
 
 /*Contact Us*/
-#contact-header h2{
+.page-header h2{
   font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  margin: auto;
 }
 
 .google-map {
-  padding-bottom: 50%;
-  position: relative;
+  padding-bottom: 10%;
 }
 
 .google-map iframe {
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
 }
+
+@media (min-width: 768px) {
+  .google-map{
+    padding-top: 5%;
+  }
+
+  .google-map iframe{
+    width: 75%;
+  }
+}
+
+
 
 /*Footer*/
 #footer-div{

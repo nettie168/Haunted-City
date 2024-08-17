@@ -13,24 +13,24 @@
     <% } %>
   </div>
 
-  <!--<% if(locals.description){ %>
+  <% if(locals.description){ %>
     <% console.log(description) %>
     <div class="container text-center">
       <%- include(description) %>
     </div>
   <% }else{ %>
-    <p>No desc</p>
-  <% } %>-->
+    <div class="container text-center">
+      <!--<h2>No desc</h2>-->
+    </div>
+  <% } %>
 
 
   <% if(locals.photos&&photos.length>=1){%>
     <div class="container">
         <% for (photo of photos) { %>
-          <div class="eventCard">
+          <div class="photoCard">
             <a href="<%="/photos/"+event +"/" + photo %>">
-              <div class="">
                 <img src="<%= "/photos/"+event+"/"+photo %>">
-              </div>
             </a>
           </div>
         <% } %>

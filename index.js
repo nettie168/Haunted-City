@@ -41,6 +41,18 @@ app.get('/teams', (req,res)=>{
     res.render("team.ejs")
 });
 
+app.get('/wraiths', (req,res) =>{
+    res.render("teamwraiths.ejs")
+});
+
+app.get('/phantoms', (req,res) =>{
+    res.render("teamphantoms.ejs")
+});
+
+app.get('/terrors', (req,res) =>{
+    res.render("teamterrors.ejs")
+});
+
 //blogs?
 //forums on blog posts for interactivity/engagement/community?
 
@@ -52,8 +64,17 @@ app.get('/teams', (req,res)=>{
 
 app.get('/photos', (req,res) => {
     const events = fs.readdirSync(__dirname + "/" +"public" + "/" +"photos");
+    var firstPhotos = [];
+
+    for(var i in events) {
+        var event = events[i]
+        var firstPhoto = fs.readdirSync(__dirname + "/" +"public" + "/" +"photos"+"/"+event)
+        firstPhotos.push(firstPhoto[0])
+     };
+
     res.render("photos.ejs",{
-            events: events
+            events: events,
+            firstPhotos: firstPhotos
         })
 });
 
@@ -62,18 +83,13 @@ app.get('/photos', (req,res) => {
 //or info on the event? yes but it breaks if it doesn't exist
 app.get('/photos/:events', (req,res) =>{
     const photos = fs.readdirSync(__dirname + "/" +"public" + "/" +"photos"+"/"+req.params.events);
-    //const eventDescription = "partials"+"/"+req.params.events+".ejs"
-    /*var eventDescription
-    fs.readFile(__dirname + "/" +"views" + "/" +"partials"+"/"+req.params.events+".ejs", (err, data) => {
-        if (!err && data) {
-            eventDescription = fs.readdirSync(__dirname + "/" +"views" + "/" +"partials"+"/"+req.params.events+".ejs");
-        }
-      })
-    console.log(eventDescription);*/
+    //const eventDescription = fs.readdirSync(__dirname + "/" +"public" + "/" +"photos"+"/"+req.params.events+"/"+"*.ejs")
+    //console.log(eventDescription);
 
     res.render('eventphotos.ejs',{
         event: req.params.events,
-        photos: photos,
+        photos: photos
+        //description: eventDescription
     })
 });
 
