@@ -95,6 +95,15 @@ app.get('/photos/:events', (req,res) =>{
 
 //add an ejs for clicking on a photo
 
+app.get('/plan-your-visit', (req,res)=>{
+    res.render('planVisit.ejs')
+});
+
+app.get('/history', (req,res)=>{
+    res.render('history.ejs')
+});
+
+
 app.get('/usefullinks', (req,res)=>{
     res.render("usefullinks.ejs")
 });
