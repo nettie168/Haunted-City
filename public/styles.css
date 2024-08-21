@@ -43,6 +43,10 @@ h3{
   font-family: FulboFont, Arial, Helvetica, sans-serif;
 }
 
+h4{
+  font-size: 1.6rem;
+}
+
 p{
   font-size: 1.2rem;
 }
@@ -151,6 +155,17 @@ details[open] div{
   color: var(--grey-colour);
 }
 
+.lightpurple{
+  background-color: #b38abd;
+  color: rgb(19, 15, 21);
+}
+
+.grey{
+    /*background-color: var(--grey-colour);*/
+    background-color: #c0b3c4;
+    color: rgb(19, 15, 21);
+}
+
 .white-card{
   background-color: whitesmoke;
   color: black;
@@ -208,7 +223,7 @@ details[open] div{
 }
 
 .info-card p{
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   padding: 10px;
   font-size: 1.5rem;
 }
@@ -216,7 +231,6 @@ details[open] div{
 .info-card-white{
   background-color: rgb(229, 216, 231);
   color: black;
-
 }
 
 @media (min-width: 768px) {
@@ -231,6 +245,7 @@ details[open] div{
   .info-card p{
     width: 70%;
     margin: auto;
+    margin-top: 50px;
   }
 
   .info p{
@@ -297,6 +312,21 @@ a.grey-button{
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.video > iframe{
+  width: 100%;
+  height: 225px;
+}
+
+
+
+@media (min-width: 768px) {
+  .video{
+    width: 560px;
+    height: 315px;
+  }
+}
+
 
 /*HomePage*/
 h1#title{
@@ -628,9 +658,34 @@ border-color: white;
 
 /*About*/
 #aboutPage{
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
+
+
+@media (min-width: 1200px) {
+  #aboutPage{
+    width: 70%; /*70%; */
+    margin: auto;
+  }
+}
+
+.pride-flag{
+  /*margin-bottom: 50px;*/
+}
+
+@media (min-width: 576px) {
+  .pride-flag{
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pride-flag{
+    margin-bottom: 0px;
+  }
+}
+
 
 
 /* The actual timeline (the vertical ruler) */
@@ -664,13 +719,13 @@ border-color: white;
 .timecontainer::after {
   content: '';
   position: absolute;
-  width: 25px;
+  width: 30px;
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid var(--purple-colour);
+  /*border: 4px solid var(--purple-colour);*/
   top: 15px;
-  border-radius: 50%;
+  border-radius: 20%;
   z-index: 1;
 }
 
@@ -720,7 +775,8 @@ border-color: white;
 /* The actual content */
 .timecontent {
   padding: 20px 30px;
-  background-color: var(--purple-colour);
+  background-color: white; /*var(--purple-colour);*/
+  color: black;
   position: relative;
   border-radius: 6px;
 }
@@ -755,6 +811,11 @@ border-color: white;
 /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
+  }
+
+  .timecontainer.right > .timecontent{
+    background-color: var(--grey-colour);
+    color: black;
   }
 }
 
@@ -804,19 +865,49 @@ border-color: white;
   object-fit: cover;
 }
 
+.photosContainer img{
+  width: 80%;
+  margin: auto;
+}
+
 .photoCard{
   /* Add shadows to create the "card" effect */
-  margin: 10px 0px 10px 10px;
-  width: 400px; /* 280px*/
-  height: 260px; /*300px*/
+  /*width: 380px; /* 280px*/
+  /*height: 260px; /*300px*/
   display: inline-block;
+
 }
 
 .photoCard img{
   border-radius: 10px;
-  width: 400px; /*280px*/
+  margin: 10px 0px 10px 10px;
+  width: 320px; /*280px*/
   height: 260px;
   object-fit: cover;
+}
+
+@media (min-width: 992px){
+  .photoCard img{
+    width: 250px;
+  }
+}
+
+@media (min-width: 1200px){
+  .photoCard img{
+    width: 325px;
+  }
+}
+
+@media (min-width: 1400px) {
+  /*.photoCard{
+    margin: 10px 0px 10px 10px;
+    width: 400px; /* 280px
+    height: 260px; /*300px
+  }*/
+  
+  .photoCard img{
+    width: 300px; /*280px*/
+  }
 }
 
 /*Photo Page Event Photos*/
@@ -870,9 +961,19 @@ div.desc {
 /*Contact Us*/
 .page-header h2{
   font-family: Arial, Helvetica, sans-serif;
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
+
+@media (min-width: 992px) {
+  .page-header h2{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    margin: auto;
+  }
+}
+
+
 
 .google-map {
   padding-bottom: 10%;
@@ -927,7 +1028,7 @@ div.desc {
 }
 
 #footer-div .menu li a {
-  font-size: 1.2em;
+  font-size: 1em;
   color: #ccc;
   margin: 0 10px;
   display: inline-block;
@@ -936,6 +1037,14 @@ div.desc {
   opacity: 0.75;
   padding: 10px;
 }
+
+@media (min-width: 992px) {
+  #footer-div .menu li a{
+    font-size: 1.4rem;
+  }
+}
+
+
 #footer-div .menu li a:hover {
   opacity: 1;
   color: #fff;

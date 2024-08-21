@@ -15,7 +15,7 @@
 
   <% if(locals.description){ %>
     <% console.log(description) %>
-    <div class="container text-center">
+    <div class="container text-center photosContainer">
       <%- include(description) %>
     </div>
   <% }else{ %>
@@ -26,7 +26,7 @@
 
 
   <% if(locals.photos&&photos.length>=1){%>
-    <div class="container">
+    <div class="container-fluid">
         <% for (photo of photos) { %>
           <div class="photoCard">
             <a href="<%="/photos/"+event +"/" + photo %>">
