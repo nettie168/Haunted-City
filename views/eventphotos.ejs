@@ -4,29 +4,30 @@
 </head>
 <body>
 
+  <div class="photosPage">
+
   <div class="container-fluid text-center"> 
     <% if(locals.event){ %>
         <h1><%= event.replaceAll("-"," ").replaceAll("__","?") %></h1>
     <%}else{ %>
-        <p>Blog Title not found, sorry about that, here's a substitute</p>
+        <p>Photo Title not found, sorry about that, here's a substitute</p>
         <h1 class="blog-title">Photos!</h1>
     <% } %>
   </div>
 
-  <% if(locals.description){ %>
-    <% console.log(description) %>
+  <% //if(locals.description){ %>
+    <p><%= //description %></p>
     <div class="container text-center photosContainer">
-      <%- include(description) %>
+      <%- include("partials/"+event+".ejs") %>
     </div>
-  <% }else{ %>
-    <div class="container text-center">
-      <!--<h2>No desc</h2>-->
-    </div>
-  <% } %>
-
+  <% //}else{ %>
+    <!--<div class="container text-center">
+      <h2>No desc</h2>
+    </div>-->
+  <%// } %>
 
   <% if(locals.photos&&photos.length>=1){%>
-    <div class="container-fluid">
+    <div class="container-fluid text-center">
         <% for (photo of photos) { %>
           <div class="photoCard">
             <a href="<%="/photos/"+event +"/" + photo %>">
@@ -41,5 +42,8 @@
       <a href="/photos">Back to Photos</a>
     </div>
   <% } %>
+
+</div>
+
 
 <%- include("partials/footer.ejs")  %>

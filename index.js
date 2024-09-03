@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
@@ -83,13 +84,10 @@ app.get('/photos', (req,res) => {
 //or info on the event? yes but it breaks if it doesn't exist
 app.get('/photos/:events', (req,res) =>{
     const photos = fs.readdirSync(__dirname + "/" +"public" + "/" +"photos"+"/"+req.params.events);
-    //const eventDescription = fs.readdirSync(__dirname + "/" +"public" + "/" +"photos"+"/"+req.params.events+"/"+"*.ejs")
-    //console.log(eventDescription);
 
     res.render('eventphotos.ejs',{
         event: req.params.events,
         photos: photos
-        //description: eventDescription
     })
 });
 
