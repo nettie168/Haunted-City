@@ -27,5 +27,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/nettie168/Haunted-City:latest
-            ghcr.io/nettie168/Haunted-City:${{ github.sha }}
+            ghcr.io/nettie168/haunted-city:latest
+            ghcr.io/nettie168/haunted-city:${{ github.sha }}
