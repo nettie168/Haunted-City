@@ -819,10 +819,10 @@ border-color: white;
     left: 0%;
   }
 
-  .timecontainer.right > .timecontent{
+  /*.timecontainer.right > .timecontent{
     background-color: var(--grey-colour);
     color: black;
-  }
+  }*/
 }
 
 /*Photos*/
