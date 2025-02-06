@@ -1,17 +1,17 @@
-<%- include ("partials/header.ejs") %>
+<%- include("partials/header.ejs")  %>
 
-<title>New Skaters</title>
+<title>Blogs</title>
 </head>
 <body>
 
-    <div class="text-center">
-        <div class="container page-header">
-            <h1>Join Us</h1>
-            <h2>We run new intake sessions to anyone who wants to learn to skate and play roller derby.</h2> <!--New intakes start every January and June</h2>-->
-            <p style="font-size: 1.4rem;">Open to anyone 18+ of any gender and ability. No skating experience required</p> 
+    <div class="text-center page-header">
+        <div class="container-fluid">
+            <h1>Blogs</h1>
+            <h2>Our latest news from Haunted City</h2>
         </div>
     </div>
 
+    
     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
       .path-0{
         animation:pathAnim-0 4s;
@@ -79,48 +79,27 @@
           d: path("M 0,500 L 0,343 C 79.75,332.0357142857143 159.5,321.07142857142856 294,318 C 428.5,314.92857142857144 617.7499999999999,319.75 760,328 C 902.2500000000001,336.25 997.5,347.92857142857144 1103,351 C 1208.5,354.07142857142856 1324.25,348.5357142857143 1440,343 L 1440,500 L 0,500 Z");
         }
       }</style><path d="M 0,500 L 0,343 C 79.75,332.0357142857143 159.5,321.07142857142856 294,318 C 428.5,314.92857142857144 617.7499999999999,319.75 760,328 C 902.2500000000001,336.25 997.5,347.92857142857144 1103,351 C 1208.5,354.07142857142856 1324.25,348.5357142857143 1440,343 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="#692b7b" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2"></path></svg>
+
+
+      <div class="container-fluid text-center purple">
+        <h2>Latest Blogs</h2>
+
+        <% if (locals.post){ %>
+            <p>Yes</p>
+        <% } %>
+
+
+        <% for(post of latestPosts){%>
+            <div class="blogCard">
+                <a href="<% %>">
+                <div class="eventCardImg">
+                    <img src="<%= post.feature_image %>">
+                </div>
+                <h3><%= post.title%></h3>
+              </a>
+            </div>
+        <% } %>
     
-
-    <div class="container-fluid text-center purple wave-card">
-
-        <h2>The Intake</h2>
-
-        <h3>The new intake runs for 15 weeks, where we teach you how to play roller derby.</h3>
-
-        <div class="row white-card">
-          <p>The Intake will teach you how to:</p>
-          <div class="col-sm-6">
-            <ul>
-              <li>Get up on skates and how to fall safely</li>
-              <li>Skate forwards and how to stop</li>
-              <li>Skate on one leg</li>
-              <li>Skate backwards</li>
-            </ul>
-        
-          </div>
-          <div class="col-sm-6">
-            <ul>
-              <li>Do T-stops and crossovers</li>
-              <li>Do transitions and toe-stop runs</li>
-              <li>Learn how to jam, block and brace</li>
-              <li>The roller derby rules and regulations</li>               
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="container info-card info">
-                   
-          <p>We encourage you to attend as many sessions as you can, as many of the skills used in the later sessions are built on earlier ones.</p>
-
-          <hr>
-
-          <p>The current intake began in June 2024 and the next one starts soon!</p>
-          <p>The first two taster sessions are £7. After that it is £20 a month plus £10 if you are hiring kit from us.</p>
-          <p>Spaces are limited, so email us at hauntedcityrd@gmail.com to book your place.</p>
-
-        </div>
-  
     </div>
 
     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
@@ -190,149 +169,27 @@
           d: path("M 0,500 L 0,343 C 109.78571428571428,335.1071428571429 219.57142857142856,327.2142857142857 327,327 C 434.42857142857144,326.7857142857143 539.4999999999999,334.24999999999994 670,338 C 800.5000000000001,341.75000000000006 956.4285714285713,341.78571428571433 1089,342 C 1221.5714285714287,342.21428571428567 1330.7857142857142,342.60714285714283 1440,343 L 1440,500 L 0,500 Z");
         }
       }</style><path d="M 0,500 L 0,343 C 109.78571428571428,335.1071428571429 219.57142857142856,327.2142857142857 327,327 C 434.42857142857144,326.7857142857143 539.4999999999999,334.24999999999994 670,338 C 800.5000000000001,341.75000000000006 956.4285714285713,341.78571428571433 1089,342 C 1221.5714285714287,342.21428571428567 1330.7857142857142,342.60714285714283 1440,343 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="#692b7b" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 250)"></path></svg>
-
     
 
-    <div class="container text-center white-card">
-      <div class="row">
-        <div class="col-md-6"> 
-          <h3>Where</h3>
-          <p><a href="https://www.better.org.uk/leisure-centre/york/energise" target="_blank">Energise Leisure Centre</a></p>
-          <p>Cornlands Road</p>
-          <p>Acomb, York</p>
-          <p>YO24 3DX</p>
-        </div>
-        <div class="col-md-6"> 
+    <div class="container-fluid text-center">
+        <h2>All Blogs</h2>
 
-          <h3>When</h3>
-          <p>Every Sunday</p>
-          <p>13:45 - 3:15</p>
-          <p>Except the first session of the new intake which is:</p>
-          <p>12:30 - 3:15</p>
+        <% for(post of posts){%>
+            <div class="blogCard">
+                <a href="/blogs/<%=post.id%>">
+                <div class="">
+                    <img src="<%= post.feature_image %>">
+                </div>
+                <h3><%= post.title%></h3>
+                <p>date?</p>
+              </a>
+            </div>
 
-        </div>
-
-        <p><em>For the first session of the intake we recommend you arrive 15 minutes early</em></p>
-        <p><em>so you have time to put on your skates and kit before the session starts.</em></p>
-        <p>If you can't make it to the first session of the intake, then arrive as normal.</p>
-      </div>
-
-        <hr style="border-color: black;">
-
-      <p>For more information, and to secure a place, please contact</p>
-      <p>hauntedcityrd@gmail.com</p>
-      <p>You can also get in touch with us on our socials:</p>
-
-      <ul class="social_icon">
-          <li><a href="https://www.facebook.com/hauntedcityrollerderby"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <!--<li><a href="https://x.com/York_Minxters"><ion-icon name="logo-twitter"></ion-icon></a></li>-->
-          <li><a href="https://www.instagram.com/hauntedcityrd/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-      </ul>
+        <% } %>
 
     </div>
 
-    <div class="container-fluid purple info-card info text-center">
-      <h2>Don't want to skate? N(S)O Problem</h2>
-      <p>Love the world of roller derby but ultimately think contact sport maybe isn’t for you? </p>
-      <p>We welcome all individuals who want to be part of the team and will be offering referee/Non Skating Official (NSO) training sessions, alongside competitive and non competitive skater training.</p>
-      <p>There are progression pathways for skaters, refs and non skating officials!</p>
-      <p>Your training sessions will be run by a core group of our more experienced skaters with help from other members of the league so you’ll get to meet us all.</p>
-      <p>Feel free to discuss these options with us during the new skater period.</p>
-
-    </div>
-
-    <div class="container info-card info">
-      <h2>Skills Ladder</h2>
-
-      <p>All the skills you need to skate, referee or officiate Roller Derby is split into coloured levels. These first ones of Red and Orange will take you through the basics of skating to give you the skills you need to work towards completing all the skills needed to play the sport.</p>
-      <p>We require you to work on basic and safety skills... so well.. You are safe! Because of the full contact nature of roller derby, following the safety rules is paramount, so you MUST wear the correct safety equipment, and follow all the guidance of the training team and Board. <!--and therefore we will only allow skaters to start doing contact drills if they are deemed safe to do so by the trainers and referees.</p>-->
-      <p>The last 30 minutes of Sundays, are only open to those who have passed Red and Orange skills, so you will be expected to leave after your session has finished. However you are welcome to stay and watch the rest of training and start getting stuck into learning how roller derby works by helping with officiating.</p>
-      <p>This is an integral part of the team and everyone is expected to have a knowledge of officiating and be able to complete this.</p>
-      
-   </div>
-
-    <div class="container white-card">
-      <h2>Derby is tough, but Skaters are Tougher</h2>
-
-      <p>Whilst we hope that you find roller derby as enjoyable as we do it is a competitive sport and there is always a risk of injury, please also be prepared for the fact it can be as mentally challenging as it is physically challenging.</p> 
-      <p>Sometimes the best asset you can have is the determination to keep trying!</p>
-   
-    </div>
-
-      <div class="container-fluid purple info-card info text-center">
-        <h2>All Genders Welcome</h2>
-        <!--<p>Whoa hold on a second, you’re a women’s team but I don’t identify as a woman.... How can I be involved? </p>-->
-        <p>The new skater sessions are open to all genders.</p>
-        <p>We have a competitive team, the Wraiths, that corresponds with the WFTDA (Women’s Flat Track Derby Association) gender statement that includes female identifying and non binary skaters.</p>
-        <p>And we have a recreational team for all skaters, including male identifying skaters, the Phantoms (referred to as OTA (open to all)).</p>
-        <p>Contact drills will be run in WFTDA and OTA groups. This is to ensure all participants feel comfortable being involved in skating at all levels within the gender statement rules of <a href="https://wftda.org/wftda-gender-statement" target="_blank">WFTDA Gender Policy</a> and there will always be alternating options for both OTA and WFTDA</p>
-  
-      </div>
-
-      <div class="container info-card info notext-center">
-        <h2>Helpful bits of Info</h2>
-        <h3>Training Venue</h3>
-        <p>York Minxters train at Energise Leisure Centre, Cornlands Road, York (YO24 3DX) – which is accessible by the number 4 bus route, which stops near the entrance.</p>
-        <p>There is plenty of car/bicycle parking on site, changing rooms with showers and a small café, selection of vending machines and a water fountain (that works 90% of the time).</p>
-        <p><a href="/plan-your-visit">Click here</a> for more information on Energise Leisure Centre and how to get here.</p>
-
-        <h3>Roller Derby Kit</h3>
-        <p>As mentioned above we do have a selection of equipment available to use during your initial
-          training sessions however this is only for new intakes. When your new intake is finished you will be expected to hand in your kit so that it can be given to those in the next intake.</p>
-        <p>We do not loan mouth guards, I’m sure we don’t need to tell you all the reasons why that would be gross.</p>
-        <p>The training team will give you advance warning of when they plan to start running Blue skills and contact drills that will require you to have one, without one you may be asked to not participate in certain skills.</p>
-        <p>Once you have a mouth guard you will need to bring it to every session as you may be doing contact drills in that training session.</p>
-        <p>So it's a good idea to get one to be prepared! You can even wear it for non-contact! </p>
-
-        <div class="container white-card">
-
-        <p>A generalised top to toe run down of what you’ll eventually need:</p>
-        <ul>
-          <li>Helmet (usually S1)</li>
-          <li>Mouthguard</li>
-          <ul>
-            <li>(A lot of players prefer SISU mouthguards)</li>
-          </ul>
-          <li>Elbow, wrist and knee pads </li>
-            <ul>
-              <li>(you will fall over a lot, it’s worth investing in derby specific and
-                highly padded knee pads in particular)</li>
-            </ul>
-            <li>Quad roller skates with front mounted adjustable toe stops</li>
-            <ul>
-              <li>(some skates may not be suitable so please send us a message to check!)</li>
-              <li>(Inline skates can ONLY be worn by refs, please discuss with Head of Training prior to training in inline skates)</li>
-            </ul>
-            <li>Comfortable, cool clothing e.g. leggings/shorts and T shirt/ athletic wear</li>
-            <li>Spill proof water bottle (and plenty of water!)</li>
-        </ul>
-      </div>
-
-      </div>
 
 
-    <div class="container-fluid purple text-center info-card info">   
-        <h2>What happens next?</h2>
-        <p>We hope you enjoy your intake, and want to carry on with roller derby.</p>
-        <p>Since we only have a limited amount of kit to rent out, we hope that all new skaters can now go out with their new found knowledge of roller derby and invest in their own kit, so that we can rent it to the new intake.</p>
-        <p>We do have a financial hardship policy, so if you are struggling, and can't get hold of your own kit, we might be able to let you rent the kit for longer. Just let us know as soon as you can. </p>
-        
-        <h3>Passing Red and Orange Skills</h3>
-        <p>When you first join Haunted City you'll be going to our Sunday sessions, and be asked to pay monthly dues of £20, which go towards renting the hall, and other costs.</p>
-        <p>If you meet the standards for joining our league, you may be invited to the Thursdays sessions where you'll be allowed to practice and play in full competitive games, with the dues becoming £30 a month.</p>
-    </div>
 
-    <div class="container info-card info">
-      <h2>Other things to know</h2>
-      <p>Training may occasionally be affected by scheduled games or other situations out of our control, we will give you plenty of notice about this and also give you the opportunity to sign up to help out with any games we host.</p>
-      <p>We don’t offer discounts from the dues as some months have 5 Sundays so it typically evens out and we tend to provide additional events to learn more about Roller Derby including off skates sessions!</p>
-      <p>We have a comprehensive Code of Conduct which you will be able to access once you have
-        completed the training.</p>
-      <p>However, the waiver gives an overview of our values and should we feel you do not meet these and have exhibited unsporting team spirit we reserve the right to ask you to leave immediately.</p>
-      <p>Kindness rules in Roller Derby! We look forward to meeting you and know you’ll fall both on track and in love with Roller Derby!</p>
-    </div>
-
-    
-    <%- include ("partials/footer.ejs") %>
-
-  
+<%- include("partials/footer.ejs")  %>

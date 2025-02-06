@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs")  %>
+
+<% for (post of post){ %>
+<title><%= post.title %></title>
+</head>
+<body>
+
+    <div class="text-center page-header">
+        <div class="container-fluid">
+            <h1><%= post.title %></h1>
+            <h2><%= post.excerpt  %></h2>
+        </div>
+        <% if(post.reading_time == 1) {%>
+        <p>Reading Time: <%= post.reading_time  %> minute</p>
+        <% }else{%>
+        <p>Reading Time: <%= post.reading_time  %> minutes</p>
+        <% } %>
+
+    </div>
+
+    <div class="container info blogPost">
+      <%- post.html %>
+    </div>
+<% } %>
+
+<%- include("partials/footer.ejs")  %>
