@@ -82,20 +82,17 @@
 
 
       <div class="container-fluid text-center purple">
-        <h2>Latest Blogs</h2>
-
-        <% if (locals.post){ %>
-            <p>Yes</p>
-        <% } %>
-
+        <h2 style="margin-bottom: 30px;">Latest Blogs</h2>
 
         <% for(post of latestPosts){%>
             <div class="blogCard">
-                <a href="<% %>">
-                <div class="eventCardImg">
-                    <img src="<%= post.feature_image %>">
+              <a href="/blogs/<%= post.id%>">
+                <div class="blogCardImg">
+                    <img src="<%= post.feature_image %>" onError="this.onerror=null;this.src='HauntedCityRollerDerbyCutOut.png';">
                 </div>
-                <h3><%= post.title%></h3>
+                <div class="blogCardInfo">
+                  <h3><%= post.title%></h3>
+                </div>
               </a>
             </div>
         <% } %>
@@ -172,16 +169,17 @@
     
 
     <div class="container-fluid text-center">
-        <h2>All Blogs</h2>
+        <h2 style="margin-bottom: 30px;">All Blogs</h2>
 
         <% for(post of posts){%>
             <div class="blogCard">
                 <a href="/blogs/<%=post.id%>">
-                <div class="">
-                    <img src="<%= post.feature_image %>">
+                <div class="blogCardImg">
+                    <img class="" src="<%= post.feature_image %>">
                 </div>
-                <h3><%= post.title%></h3>
-                <p>date?</p>
+                <div class="blogCardInfo">
+                  <h3><%= post.title%></h3>
+                </div>
               </a>
             </div>
 

@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import fs from "fs";
 import axios from "axios";
 import config from "./config.js";
+//import { console } from "inspector";
 
 const app = express();
 
@@ -28,16 +29,23 @@ app.get('/contact', (req,res)=>{
     res.render("contact.ejs")
 });
 
-app.get('/newskaters', (req,res)=>{
-    res.render("newskaters.ejs")
+app.get('/newskaters', async(req,res)=>{
+    try{
+        const response = await axios.get(`${config.ghostApiUrl}/ghost/api/content/posts/${id}/?key=${config.ghostApiKey}`);
+        newskaterBlog = response.data.posts;
+
+        res.render("newskaters.ejs",{
+            newskaterBlog: newskaterBlog
+        })
+    }catch{
+        res.render("newskaters.ejs")
+    }
 });
 
 app.get('/joinus', (req,res)=>{
     res.render("joinus.ejs")
 });
 
-//do a sub-thing of teams?
-//why is this not working?
 app.get('/teams', (req,res)=>{
     res.render("team.ejs")
 });
@@ -54,31 +62,18 @@ app.get('/terrors', (req,res) =>{
     res.render("teamterrors.ejs")
 });
 
-//blogs?
-//forums on blog posts for interactivity/engagement/community?
-
-//create folders of file with name in public
-//send through folder/array of photos
-//have main gallery which shows each folder (like blog list)
-//clicking on post/folder takes you to photos page of that folder
-//with one gallery item which iterates over each photo
-
 app.get('/blogs', async(req,res) =>{
     try{
-        //const result = await axios.get(blogsURLDemo +"?key="+APIkey+"&include=tags,authors");
-        //const key = "22444f78447824223cefc48062";
-        //const response = await axios.get("https://demo.ghost.io/ghost/api/content/posts/?key="+key+"&include=tags,authors");
-
         const response = await axios.get(`${config.ghostApiUrl}/ghost/api/content/posts/?key=${config.ghostApiKey}`);
         const latestPosts = [response.data.posts[0],response.data.posts[1],response.data.posts[2]]
+        /*const latestPosts = response.data.posts[0]*/
  
         res.render("blogs.ejs",{
             latestPosts: latestPosts,
             posts: response.data.posts,
         })
-
     }catch{
-        res.render("blogs.ejs")
+        res.render("having-a-moment.ejs")
         console.log("error")
     }
 });
@@ -86,18 +81,16 @@ app.get('/blogs', async(req,res) =>{
 app.get('/blogs/:id', async(req,res) => {
     try{
         const id = req.params.id;
-//        const response = await axios.get("https://demo.ghost.io/ghost/api/content/posts/"+id+"?key=22444f78447824223cefc48062");
-        const response = await axios.get(`${config.ghostApiUrl}/ghost/api/content/posts/?key=${config.ghostApiKey}`);
+        const response = await axios.get(`${config.ghostApiUrl}/ghost/api/content/posts/${id}/?key=${config.ghostApiKey}&include=authors`);
 
-        /*const response = await axios.get("")
-            url=http://ghost.local:2368 node index.js*/
+        console.log("still here");
+        console.log(response.data.posts);
 
-        console.log("here")
         res.render("blogPost.ejs",{
             post: response.data.posts
         })
-
-    }catch{
+    }catch(error){
+        //res.render("having-a-moment.ejs")
         res.render("blogPost.ejs")
         console.log("error")
     }
@@ -146,7 +139,6 @@ app.get('/history', (req,res)=>{
 app.get('/usefullinks', (req,res)=>{
     res.render("usefullinks.ejs")
 });
-
 
 
 app.listen(port, () => {

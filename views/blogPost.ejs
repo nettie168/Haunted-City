@@ -1,25 +1,45 @@
 <%- include("partials/header.ejs")  %>
 
 <% for (post of post){ %>
+<head>
 <title><%= post.title %></title>
+    <meta charset="UTF-8">
+    <meta name="description" content="<%=post.meta_description%>">
+    <meta name="author" content="<%=post.primary_author.name%>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Meta Data for Facebook-->
+  <meta property="og:title" content="<%=post.og_title%>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.hauntedcityrollerderby.co.uk/blogs/<%=post.id%>" />
+  <meta
+    property="og:image"
+    content="public\HauntedCityRollerDerbyGhostCutOutPurpleTop.png"
+  />
+
 </head>
 <body>
 
-    <div class="text-center page-header">
+
+    <div class="container blogPost">
+
+        <div class="text-center page-header">
         <div class="container-fluid">
             <h1><%= post.title %></h1>
-            <h2><%= post.excerpt  %></h2>
         </div>
+        </div>
+
+        <div class="container">
         <% if(post.reading_time == 1) {%>
-        <p>Reading Time: <%= post.reading_time  %> minute</p>
-        <% }else{%>
-        <p>Reading Time: <%= post.reading_time  %> minutes</p>
+            <p class="reading_time">Reading Time: <%= post.reading_time  %> minute</p>
+            <% }else{%>
+            <p class="reading_time">Reading Time: <%= post.reading_time  %> minutes</p>
         <% } %>
-
-    </div>
-
-    <div class="container info blogPost">
-      <%- post.html %>
+        <% if(locals.post.primary_author){ %>
+            <p class="reading_time">Written by: <%=post.primary_author.name%></p>
+        <% } %>
+        <%- post.html %>
+        </div>
     </div>
 <% } %>
 

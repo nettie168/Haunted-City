@@ -32,7 +32,6 @@ h1{
 }
 
 h2{
-  padding: 25px;
   font-size: 2.2rem;
   font-family: FulboFont, Arial, Helvetica, sans-serif;
 }
@@ -60,7 +59,7 @@ a{
 }
 
 /* unvisited link */
-p> a:link {
+p > a:link {
   color: green;
 }
 
@@ -75,7 +74,7 @@ p > a:hover {
 }
 
 /* selected link */
-p> a:active {
+p > a:active {
   color: green;
 } 
 
@@ -89,6 +88,7 @@ hr{
 }
 
 ul{
+  font-size: 1.2rem;
   list-style:inside;
   list-style: none;
 }
@@ -165,19 +165,12 @@ details[open] div{
   color: rgb(19, 15, 21);
 }
 
-.grey{
-    /*background-color: var(--grey-colour);*/
-    /*background-color: #a69da8;*/
-    /*border: 5px solid #ccc;
-    /*color: rgb(19, 15, 21);*/
-}
-
 .white-card{
   background-color: whitesmoke;
   color: black;
   border-radius: 12px;
-  width: 90%;
   margin: auto;
+  margin-top: 25px;
   margin-bottom: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -225,13 +218,10 @@ details[open] div{
   padding-bottom: 50px;
 }
 
-.info-card{
-}
-
 .info-card p{
   /*margin-top: 100px;*/
   padding: 10px;
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
 }
 
 .info-card-white{
@@ -249,13 +239,13 @@ details[open] div{
   }*/
 
   .info-card p{
-    width: 70%;
+    /*width: 70%;*/
     margin: auto;
     margin-top: 50px;
   }
 
   .info p{
-    width: 80%;
+    /*width: 80%;*/
     margin: auto;
   }
 }
@@ -366,6 +356,7 @@ h2#subtitle{
 
 .nav-link{
 color: white;
+font-size: 1rem;
 }
 
 .nav-link:hover{
@@ -496,7 +487,7 @@ border-color: white;
   border-radius: 25px;
 }
 
-.new-intake p{
+.new-intake > p{
   padding-left: 50px;
   padding-right: 50px;
   font-size: 1.4rem;
@@ -608,7 +599,7 @@ border-color: white;
   text-transform: uppercase
 }
 
-.content-details p {
+.content-details > p {
   color: #fff;
   font-size: 1.1em
 }
@@ -633,12 +624,12 @@ border-color: white;
   }
 }
 
-.social_icon, .menu, a{
+.social_icon, .menu > a{
     color: black;
     margin: 0 10px;
 }
 
-.social_icon, .menu, a:hover{
+.social_icon, .menu > a:hover{
     color: grey;
 }
 
@@ -691,8 +682,6 @@ border-color: white;
     margin-bottom: 0px;
   }
 }
-
-
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -937,11 +926,11 @@ border-color: white;
   /* Add shadows to create the "card" effect */
   border-radius: 10px; 
   /*box-shadow: 0 4px 8px 0 var(--purple-colour); */
-  box-shadow: 0 4px 8px 0 black;
-  transition: 0.3s;
-  margin: 10px;
-  width: 400px; /*280px*/
-  height: 400px;
+  box-shadow: 2px 2px 6px 0 white;
+  /*transition: 0.8s;*/
+  margin: 20px;
+  width: 400px;
+  height: 350px; /*260*/
   background-color: white;
   display: inline-block;
 }
@@ -966,25 +955,223 @@ border-color: white;
   text-align: start;
 }
 
+.blogCardInfo h3{
+  font-size: 1.4rem;
+  /*height: 50px; /*100*/
+  margin-top: -30px; /*20*/
+  overflow: hidden;
+}
+
+.blogCardImg{
+  width: 400px;
+  height: 300px; /*160*/
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 10px 10px 0 0;
+}
+  
+
 .blogCard img{
-  border-radius: 10px 10px 0px 0px; 
-  margin-top: -30px;
+  margin-top: 0px; /*30*/
   width: 400px; /*280px*/
-  height: 260px;
+  height: 250px;
   object-fit: cover;
 }
 
 /*Blog Post*/
 
 .blogPost{
+  width: 70%;
   padding: 10px;
   font-size: 1.5rem;
 }
 
-.blogPost img{
-  width: 70%;
-  margin: 20px 20px 20px 20px;
-  object-fit: cover;
+.blogPost ul{
+    list-style:inside;
+}
+
+.blogPost > .container> p{
+  margin-bottom: 20px;
+}
+
+.blogPost > .container > .reading_time{
+  font-size: 0.9rem;
+}
+
+
+
+.kg-image{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+figcaption{
+  font-size: 1rem;
+}
+
+.kg-bookmark-card,
+.kg-bookmark-card * {
+    box-sizing: border-box;
+}
+
+.kg-bookmark-card,
+.kg-bookmark-publisher {
+    position: relative;
+    width: 100%;
+}
+
+.kg-bookmark-card a.kg-bookmark-container,
+.kg-bookmark-card a.kg-bookmark-container:hover {
+    display: flex;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid rgb(124 139 154 / 25%);
+    overflow: hidden;
+    color: inherit;
+}
+
+.kg-bookmark-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.kg-bookmark-title {
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    margin-top: 3px;
+    font-weight: 400;
+    max-height: 44px;
+    overflow-y: hidden;
+    opacity: 0.7;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.kg-bookmark-metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.kg-bookmark-metadata > *:not(img) {
+    opacity: 0.7;
+}
+
+.kg-bookmark-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.kg-bookmark-author,
+.kg-bookmark-publisher {
+    display: inline;
+}
+
+.kg-bookmark-publisher {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 240px;
+    white-space: nowrap;
+    display: block;
+    line-height: 1.65em;
+}
+
+.kg-bookmark-metadata > span:nth-of-type(2) {
+    font-weight: 400;
+}
+
+.kg-bookmark-metadata > span:nth-of-type(2):before {
+    content: "•";
+    margin: 0 6px;
+}
+
+.kg-bookmark-metadata > span:last-of-type {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kg-bookmark-thumbnail {
+    position: relative;
+    flex-grow: 1;
+    min-width: 33%;
+}
+
+.kg-bookmark-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.kg-gallery-card,
+.kg-gallery-card * {
+    box-sizing: border-box;
+}
+
+.kg-gallery-card,
+.kg-image-card {
+    --gap: 1.2rem;
+}
+
+.kg-image-card:not(.kg-card-hascaption) + .kg-image-card,
+.kg-image-card:not(.kg-card-hascaption) + .kg-gallery-card,
+.kg-gallery-card:not(.kg-card-hascaption) + .kg-image-card,
+.kg-gallery-card:not(.kg-card-hascaption) + .kg-gallery-card {
+    margin-top: var(--gap);
+}
+
+.kg-gallery-container {
+    position: relative;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: var(--gap) 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 var(--gap);
+}
+
+@media (max-width: 600px) {
+    .kg-gallery-card,
+    .kg-image-card {
+        --gap: 0.6rem;
+    }
 }
 
 
