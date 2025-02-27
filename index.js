@@ -70,11 +70,13 @@ app.get('/blogs', async(req,res) =>{
         //const response = await axios.get("https://demo.ghost.io/ghost/api/content/posts/?key="+key+"&include=tags,authors");
 
         const response = await axios.get(`${config.ghostApiUrl}/ghost/api/content/posts/?key=${config.ghostApiKey}`);
-        const latestPosts = [response.data.posts[0],response.data.posts[1],response.data.posts[2]]
+        const posts = response.data.posts
+
+        const latestPosts = response.data.posts.slice(0, Math.min(config.numOfLatestPosts, posts.length) + 1)
  
         res.render("blogs.ejs",{
             latestPosts: latestPosts,
-            posts: response.data.posts,
+            posts: posts,
         })
 
     }catch{
