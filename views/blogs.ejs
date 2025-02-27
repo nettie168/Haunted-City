@@ -175,7 +175,7 @@
             <div class="blogCard">
                 <a href="/blogs/<%=post.id%>">
                 <div class="blogCardImg">
-                    <img class="" src="<%= post.feature_image %>">
+                  <img src="<%= post.feature_image %>" onError="this.onerror=null;this.src='HauntedCityRollerDerbyCutOut.png';">
                 </div>
                 <div class="blogCardInfo">
                   <h3><%= post.title%></h3>
