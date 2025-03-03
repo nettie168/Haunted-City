@@ -91,7 +91,7 @@
                     <img src="<%= post.feature_image %>" onError="this.onerror=null;this.src='HauntedCityRollerDerbyCutOut.png';">
                 </div>
                 <div class="blogCardInfo">
-                  <h3><%= post.title%></h3>
+                  <h3><%= post.title.substring(0,62)%></h3>
                 </div>
               </a>
             </div>
@@ -178,16 +178,13 @@
                   <img src="<%= post.feature_image %>" onError="this.onerror=null;this.src='HauntedCityRollerDerbyCutOut.png';">
                 </div>
                 <div class="blogCardInfo">
-                  <h3><%= post.title%></h3>
+                  <h3><%= post.title.substring(0,62)%></h3>
                 </div>
               </a>
             </div>
-
         <% } %>
 
     </div>
-
-
 
 
 <%- include("partials/footer.ejs")  %>

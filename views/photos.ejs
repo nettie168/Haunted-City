@@ -85,15 +85,17 @@
 
   <% /* for (event of events) { */ %>
   <% for (var i in events) { %>
-    <div class="eventCard">
+    <div class="blogCard">
       <a href="/photos/<%= events[i] %>">
-        <div class="eventCardImg">
+        <div class="blogCardImg">
           <img src=" <%= "/photos/"+events[i]+"/"+firstPhotos[i] %>">
             <!--<img class="" src="<%= "/photos/"+events[i]+"/firstImage.jpg" %>" onError="this.onerror=null;this.src='/HauntedCityRollerDerbyCutOut.png';">-->
         </div>
 
         <div>
-          <h3><%= events[i] %></h3>
+          <div class="blogCardInfo">
+            <h3><%= events[i] %></h3>
+          </div>
         </div>
       </a>
     </div>
