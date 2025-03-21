@@ -67,7 +67,7 @@ app.get('/blogs', async(req,res) =>{
         const response = await axios.get(`${config.ghostApiUrl}/ghost/api/content/posts/?key=${config.ghostApiKey}`);
         const posts = response.data.posts
 
-        const latestPosts = response.data.posts.slice(0, Math.min(config.numOfLatestPosts, posts.length) + 1)
+        const latestPosts = response.data.posts.slice(0, Math.min(config.numOfLatestPosts, posts.length))
  
         res.render("blogs.ejs",{
             latestPosts: latestPosts,
